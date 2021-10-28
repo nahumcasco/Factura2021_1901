@@ -14,5 +14,11 @@ namespace FACTURACION.Vistas
         {
             InitializeComponent();
         }
+
+        private void UsuariosToolStripButton_Click(object sender, EventArgs e)
+        {
+            UsuariosView users = new UsuariosView();
+            users.Show();
+        }
     }
 }

@@ -31,29 +31,29 @@ namespace FACTURACION.Vistas
         {
             this.components = new System.ComponentModel.Container();
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
-            this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.UsuariosToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.ProductosToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.backStageView1 = new Syncfusion.Windows.Forms.BackStageView(this.components);
             this.backStage1 = new Syncfusion.Windows.Forms.BackStage();
             this.backStageTab1 = new Syncfusion.Windows.Forms.BackStageTab();
             this.backStageTab2 = new Syncfusion.Windows.Forms.BackStageTab();
+            this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.UsuariosToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ProductosToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backStage1)).BeginInit();
+            this.backStage1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
             this.toolStripEx1.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.toolStripEx2.SuspendLayout();
             this.toolStripTabItem3.Panel.SuspendLayout();
             this.toolStripEx3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backStage1)).BeginInit();
-            this.backStage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControlAdv1
@@ -91,6 +91,64 @@ namespace FACTURACION.Vistas
             this.ribbonControlAdv1.ThemeName = "Office2016";
             this.ribbonControlAdv1.ThemeStyle.MoreCommandsStyle.PropertyGridViewBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             // 
+            // backStageView1
+            // 
+            this.backStageView1.BackStage = this.backStage1;
+            this.backStageView1.HostControl = null;
+            this.backStageView1.HostForm = this;
+            // 
+            // backStage1
+            // 
+            this.backStage1.AllowDrop = true;
+            this.backStage1.BackStagePanelWidth = 130;
+            this.backStage1.BeforeTouchSize = new System.Drawing.Size(799, 475);
+            this.backStage1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backStage1.ChildItemSize = new System.Drawing.Size(80, 140);
+            this.backStage1.Controls.Add(this.backStageTab1);
+            this.backStage1.Controls.Add(this.backStageTab2);
+            this.backStage1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.backStage1.ItemSize = new System.Drawing.Size(130, 40);
+            this.backStage1.Location = new System.Drawing.Point(0, 0);
+            this.backStage1.MinimumSize = new System.Drawing.Size(100, 102);
+            this.backStage1.Name = "backStage1";
+            this.backStage1.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Managed;
+            this.backStage1.Size = new System.Drawing.Size(799, 475);
+            this.backStage1.TabIndex = 2;
+            this.backStage1.ThemeName = "BackStage2016Renderer";
+            this.backStage1.Visible = false;
+            // 
+            // backStageTab1
+            // 
+            this.backStageTab1.Accelerator = "";
+            this.backStageTab1.BackColor = System.Drawing.Color.White;
+            this.backStageTab1.Image = null;
+            this.backStageTab1.ImageSize = new System.Drawing.Size(16, 16);
+            this.backStageTab1.Location = new System.Drawing.Point(129, 0);
+            this.backStageTab1.Name = "backStageTab1";
+            this.backStageTab1.Placement = Syncfusion.Windows.Forms.BackStageItemPlacement.Top;
+            this.backStageTab1.Position = new System.Drawing.Point(11, 51);
+            this.backStageTab1.ShowCloseButton = true;
+            this.backStageTab1.Size = new System.Drawing.Size(670, 475);
+            this.backStageTab1.TabIndex = 3;
+            this.backStageTab1.Text = "Cambiar Contraseña";
+            this.backStageTab1.ThemesEnabled = false;
+            // 
+            // backStageTab2
+            // 
+            this.backStageTab2.Accelerator = "";
+            this.backStageTab2.BackColor = System.Drawing.Color.White;
+            this.backStageTab2.Image = null;
+            this.backStageTab2.ImageSize = new System.Drawing.Size(16, 16);
+            this.backStageTab2.Location = new System.Drawing.Point(129, 0);
+            this.backStageTab2.Name = "backStageTab2";
+            this.backStageTab2.Placement = Syncfusion.Windows.Forms.BackStageItemPlacement.Top;
+            this.backStageTab2.Position = new System.Drawing.Point(52, 92);
+            this.backStageTab2.ShowCloseButton = true;
+            this.backStageTab2.Size = new System.Drawing.Size(670, 475);
+            this.backStageTab2.TabIndex = 4;
+            this.backStageTab2.Text = "Cerrar Sesión";
+            this.backStageTab2.ThemesEnabled = false;
+            // 
             // toolStripTabItem1
             // 
             this.toolStripTabItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,6 +183,18 @@ namespace FACTURACION.Vistas
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripEx1.Size = new System.Drawing.Size(260, 91);
             this.toolStripEx1.TabIndex = 0;
+            // 
+            // UsuariosToolStripButton
+            // 
+            this.UsuariosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuariosToolStripButton.Image = global::FACTURACION.Properties.Resources.Usuarios;
+            this.UsuariosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UsuariosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UsuariosToolStripButton.Name = "UsuariosToolStripButton";
+            this.UsuariosToolStripButton.Size = new System.Drawing.Size(103, 74);
+            this.UsuariosToolStripButton.Text = "Lista de Usuarios";
+            this.UsuariosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.UsuariosToolStripButton.Click += new System.EventHandler(this.UsuariosToolStripButton_Click);
             // 
             // toolStripTabItem2
             // 
@@ -161,6 +231,17 @@ namespace FACTURACION.Vistas
             this.toolStripEx2.Size = new System.Drawing.Size(306, 91);
             this.toolStripEx2.TabIndex = 0;
             // 
+            // ProductosToolStripButton
+            // 
+            this.ProductosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductosToolStripButton.Image = global::FACTURACION.Properties.Resources.Productos;
+            this.ProductosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProductosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProductosToolStripButton.Name = "ProductosToolStripButton";
+            this.ProductosToolStripButton.Size = new System.Drawing.Size(74, 74);
+            this.ProductosToolStripButton.Text = "Productos";
+            this.ProductosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // toolStripTabItem3
             // 
             this.toolStripTabItem3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,28 +277,6 @@ namespace FACTURACION.Vistas
             this.toolStripEx3.Size = new System.Drawing.Size(323, 91);
             this.toolStripEx3.TabIndex = 0;
             // 
-            // UsuariosToolStripButton
-            // 
-            this.UsuariosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuariosToolStripButton.Image = global::FACTURACION.Properties.Resources.Usuarios;
-            this.UsuariosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.UsuariosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.UsuariosToolStripButton.Name = "UsuariosToolStripButton";
-            this.UsuariosToolStripButton.Size = new System.Drawing.Size(103, 74);
-            this.UsuariosToolStripButton.Text = "Lista de Usuarios";
-            this.UsuariosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // ProductosToolStripButton
-            // 
-            this.ProductosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductosToolStripButton.Image = global::FACTURACION.Properties.Resources.Productos;
-            this.ProductosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ProductosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ProductosToolStripButton.Name = "ProductosToolStripButton";
-            this.ProductosToolStripButton.Size = new System.Drawing.Size(74, 74);
-            this.ProductosToolStripButton.Text = "Productos";
-            this.ProductosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // ClientesToolStripButton
             // 
             this.ClientesToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,63 +287,6 @@ namespace FACTURACION.Vistas
             this.ClientesToolStripButton.Size = new System.Drawing.Size(61, 74);
             this.ClientesToolStripButton.Text = "Clientes";
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // backStageView1
-            // 
-            this.backStageView1.BackStage = this.backStage1;
-            this.backStageView1.HostControl = null;
-            this.backStageView1.HostForm = this;
-            // 
-            // backStage1
-            // 
-            this.backStage1.AllowDrop = true;
-            this.backStage1.BeforeTouchSize = new System.Drawing.Size(799, 475);
-            this.backStage1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.backStage1.ChildItemSize = new System.Drawing.Size(80, 140);
-            this.backStage1.Controls.Add(this.backStageTab1);
-            this.backStage1.Controls.Add(this.backStageTab2);
-            this.backStage1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.backStage1.ItemSize = new System.Drawing.Size(138, 40);
-            this.backStage1.Location = new System.Drawing.Point(4, 53);
-            this.backStage1.MinimumSize = new System.Drawing.Size(100, 88);
-            this.backStage1.Name = "backStage1";
-            this.backStage1.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Blue;
-            this.backStage1.Size = new System.Drawing.Size(799, 475);
-            this.backStage1.TabIndex = 2;
-            this.backStage1.ThemeName = "BackStage2016Renderer";
-            this.backStage1.Visible = false;
-            // 
-            // backStageTab1
-            // 
-            this.backStageTab1.Accelerator = "";
-            this.backStageTab1.BackColor = System.Drawing.Color.White;
-            this.backStageTab1.Image = null;
-            this.backStageTab1.ImageSize = new System.Drawing.Size(16, 16);
-            this.backStageTab1.Location = new System.Drawing.Point(137, 0);
-            this.backStageTab1.Name = "backStageTab1";
-            this.backStageTab1.Placement = Syncfusion.Windows.Forms.BackStageItemPlacement.Top;
-            this.backStageTab1.Position = new System.Drawing.Point(0, 0);
-            this.backStageTab1.ShowCloseButton = true;
-            this.backStageTab1.Size = new System.Drawing.Size(662, 475);
-            this.backStageTab1.TabIndex = 3;
-            this.backStageTab1.Text = "Cambiar Contraseña";
-            this.backStageTab1.ThemesEnabled = false;
-            // 
-            // backStageTab2
-            // 
-            this.backStageTab2.Accelerator = "";
-            this.backStageTab2.BackColor = System.Drawing.Color.White;
-            this.backStageTab2.Image = null;
-            this.backStageTab2.ImageSize = new System.Drawing.Size(16, 16);
-            this.backStageTab2.Location = new System.Drawing.Point(137, 0);
-            this.backStageTab2.Name = "backStageTab2";
-            this.backStageTab2.Placement = Syncfusion.Windows.Forms.BackStageItemPlacement.Top;
-            this.backStageTab2.Position = new System.Drawing.Point(0, 0);
-            this.backStageTab2.ShowCloseButton = true;
-            this.backStageTab2.Size = new System.Drawing.Size(662, 475);
-            this.backStageTab2.TabIndex = 4;
-            this.backStageTab2.Text = "Cerrar Sesión";
-            this.backStageTab2.ThemesEnabled = false;
             // 
             // MenuView
             // 
@@ -300,6 +302,8 @@ namespace FACTURACION.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).EndInit();
             this.ribbonControlAdv1.ResumeLayout(false);
             this.ribbonControlAdv1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backStage1)).EndInit();
+            this.backStage1.ResumeLayout(false);
             this.toolStripTabItem1.Panel.ResumeLayout(false);
             this.toolStripEx1.ResumeLayout(false);
             this.toolStripEx1.PerformLayout();
@@ -309,8 +313,6 @@ namespace FACTURACION.Vistas
             this.toolStripTabItem3.Panel.ResumeLayout(false);
             this.toolStripEx3.ResumeLayout(false);
             this.toolStripEx3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backStage1)).EndInit();
-            this.backStage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FACTURACION.Controladores;
 
 namespace FACTURACION.Vistas
 {
-    public partial class UsuariosView : Form
+    public partial class FacturaView : Form
     {
-        public UsuariosView()
+        public FacturaView()
         {
             InitializeComponent();
-            UsuarioController controller = new UsuarioController(this);
         }
     }
 }
