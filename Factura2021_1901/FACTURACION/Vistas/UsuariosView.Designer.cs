@@ -29,6 +29,7 @@ namespace FACTURACION.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,9 @@ namespace FACTURACION.Vistas
             this.ModificarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.UsuariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,6 +125,7 @@ namespace FACTURACION.Vistas
             this.ClavetextBox.Enabled = false;
             this.ClavetextBox.Location = new System.Drawing.Point(149, 152);
             this.ClavetextBox.Name = "ClavetextBox";
+            this.ClavetextBox.PasswordChar = '*';
             this.ClavetextBox.Size = new System.Drawing.Size(295, 22);
             this.ClavetextBox.TabIndex = 8;
             // 
@@ -183,6 +187,10 @@ namespace FACTURACION.Vistas
             this.UsuariosDataGridView.Size = new System.Drawing.Size(740, 168);
             this.UsuariosDataGridView.TabIndex = 20;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // UsuariosView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -208,6 +216,7 @@ namespace FACTURACION.Vistas
             this.Name = "UsuariosView";
             this.Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +239,6 @@ namespace FACTURACION.Vistas
         public System.Windows.Forms.Button ModificarButton;
         public System.Windows.Forms.Button NuevoButton;
         public System.Windows.Forms.DataGridView UsuariosDataGridView;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
