@@ -30,6 +30,7 @@ namespace FACTURACION.Vistas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuView));
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.backStageView1 = new Syncfusion.Windows.Forms.BackStageView(this.components);
             this.backStage1 = new Syncfusion.Windows.Forms.BackStage();
@@ -44,6 +45,7 @@ namespace FACTURACION.Vistas
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backStage1)).BeginInit();
@@ -81,7 +83,7 @@ namespace FACTURACION.Vistas
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
             this.ribbonControlAdv1.ShowContextMenu = false;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = false;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(789, 157);
@@ -287,6 +289,19 @@ namespace FACTURACION.Vistas
             this.ClientesToolStripButton.Size = new System.Drawing.Size(61, 74);
             this.ClientesToolStripButton.Text = "Clientes";
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ClientesToolStripButton.Click += new System.EventHandler(this.ClientesToolStripButton_Click);
+            // 
+            // tabbedMDIManager1
+            // 
+            this.tabbedMDIManager1.AttachedTo = this;
+            this.tabbedMDIManager1.CloseButtonBackColor = System.Drawing.Color.White;
+            this.tabbedMDIManager1.CloseButtonToolTip = "";
+            this.tabbedMDIManager1.DropDownButtonToolTip = "";
+            this.tabbedMDIManager1.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabbedMDIManager1.NeedUpdateHostedForm = false;
+            this.tabbedMDIManager1.ShowCloseButton = true;
+            this.tabbedMDIManager1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2010);
+            this.tabbedMDIManager1.ThemeName = "TabRendererOffice2010";
             // 
             // MenuView
             // 
@@ -295,6 +310,7 @@ namespace FACTURACION.Vistas
             this.ClientSize = new System.Drawing.Size(789, 490);
             this.Controls.Add(this.backStage1);
             this.Controls.Add(this.ribbonControlAdv1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
             this.Name = "MenuView";
             this.Text = "Menu";
@@ -333,5 +349,6 @@ namespace FACTURACION.Vistas
         private Syncfusion.Windows.Forms.BackStage backStage1;
         private Syncfusion.Windows.Forms.BackStageTab backStageTab1;
         private Syncfusion.Windows.Forms.BackStageTab backStageTab2;
+        private Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
     }
 }

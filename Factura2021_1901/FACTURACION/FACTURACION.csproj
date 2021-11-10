@@ -58,10 +58,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\UsuarioController.cs" />
+    <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\FacturaDAO.cs" />
+    <Compile Include="Modelos\DAO\ProductoDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
+    <Compile Include="Modelos\Entidades\Cliente.cs" />
+    <Compile Include="Modelos\Entidades\DetalleFactura.cs" />
+    <Compile Include="Modelos\Entidades\Factura.cs" />
+    <Compile Include="Modelos\Entidades\Producto.cs" />
+    <Compile Include="Modelos\Entidades\TipoProducto.cs" />
     <Compile Include="Modelos\Entidades\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

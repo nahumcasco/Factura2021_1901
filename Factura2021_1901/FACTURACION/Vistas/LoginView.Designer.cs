@@ -64,6 +64,7 @@ namespace FACTURACION.Vistas
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(214, 22);
             this.EmailTextBox.TabIndex = 2;
+            this.EmailTextBox.Text = "nahumcasco@gmail.com";
             // 
             // ClaveTextBox
             // 
@@ -73,6 +74,7 @@ namespace FACTURACION.Vistas
             this.ClaveTextBox.PasswordChar = '*';
             this.ClaveTextBox.Size = new System.Drawing.Size(214, 22);
             this.ClaveTextBox.TabIndex = 3;
+            this.ClaveTextBox.Text = "1234";
             // 
             // AceptarButton
             // 

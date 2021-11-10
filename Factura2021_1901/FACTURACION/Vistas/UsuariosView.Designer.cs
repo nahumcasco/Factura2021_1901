@@ -35,7 +35,7 @@ namespace FACTURACION.Vistas
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.EsAdministradorcheckBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
             this.ClavetextBox = new System.Windows.Forms.TextBox();
@@ -96,13 +96,13 @@ namespace FACTURACION.Vistas
             this.EsAdministradorcheckBox.Text = "Es Administrador";
             this.EsAdministradorcheckBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // IdTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(124, 22);
-            this.textBox1.TabIndex = 5;
+            this.IdTextBox.Location = new System.Drawing.Point(149, 25);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
+            this.IdTextBox.Size = new System.Drawing.Size(124, 22);
+            this.IdTextBox.TabIndex = 5;
             // 
             // NombretextBox
             // 
@@ -141,7 +141,6 @@ namespace FACTURACION.Vistas
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Enabled = false;
             this.EliminarButton.Location = new System.Drawing.Point(450, 250);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(95, 39);
@@ -205,7 +204,7 @@ namespace FACTURACION.Vistas
             this.Controls.Add(this.ClavetextBox);
             this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.NombretextBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.EsAdministradorcheckBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -229,7 +228,7 @@ namespace FACTURACION.Vistas
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.CheckBox EsAdministradorcheckBox;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox IdTextBox;
         public System.Windows.Forms.TextBox NombretextBox;
         public System.Windows.Forms.TextBox EmailtextBox;
         public System.Windows.Forms.TextBox ClavetextBox;

@@ -14,11 +14,47 @@ namespace FACTURACION.Vistas
         {
             InitializeComponent();
         }
-
+        UsuariosView users;
+        ClientesView clientes;
         private void UsuariosToolStripButton_Click(object sender, EventArgs e)
         {
-            UsuariosView users = new UsuariosView();
-            users.Show();
+            if (users == null)
+            {
+                users = new UsuariosView();
+                users.MdiParent = this;
+                users.FormClosed += Users_FormClosed;
+                users.Show();
+            }
+            else
+            {
+                users.Activate();
+            }
+           
+        }
+
+        private void Users_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            users = null;
+        }
+
+        private void ClientesToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (clientes == null)
+            {
+                clientes = new ClientesView();
+                clientes.MdiParent = this;
+                clientes.FormClosed += Clientes_FormClosed;
+                clientes.Show();
+            }
+            else
+            {
+                clientes.Activate();
+            }
+        }
+
+        private void Clientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            clientes = null;
         }
     }
 }
