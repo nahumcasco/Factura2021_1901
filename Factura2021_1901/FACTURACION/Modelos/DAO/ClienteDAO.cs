@@ -175,43 +175,41 @@ namespace FACTURACION.Modelos.DAO
             }
             return miImagen;
         }
-    
-        
-        public List<KeyValuePair<int, string>> GetClientePorIdentidad(string identidad)
-        {
-            List<KeyValuePair<int, string>> miLista = new List<KeyValuePair<int, string>>();
 
+        public Cliente GetClientePorIdentidad(string identidad)
+        {
+            Cliente cliente = new Cliente();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT ID, NOMBRE FROM CLIENTE ");
+                sql.Append(" SELECT * FROM CLIENTE ");
                 sql.Append(" WHERE IDENTIDAD = @Identidad; ");
 
-                using (MiConexion)
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Identidad", SqlDbType.NVarChar, 20).Value = identidad;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
                 {
-                    MiConexion.Open();
-                    using (comando)
-                    {
-                        comando.CommandType = CommandType.Text;
-                        comando.CommandText = sql.ToString();
-                        comando.Parameters.Add("@Identidad", SqlDbType.NVarChar, 20).Value = identidad;
-
-                        SqlDataReader dr = comando.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            miLista.Add(new KeyValuePair<int, string>((int)dr["ID"], dr["NOMBRE"].ToString()));
-                        }
-                    }
+                    cliente.Id = (int)dr["ID"];
+                    cliente.Identidad = (string)dr["IDENTIDAD"];
+                    cliente.Nombre = (string)dr["NOMBRE"];
+                    cliente.Email = (string)dr["EMAIL"];
+                    cliente.Direccion = (string)dr["DIRECCION"];
                 }
+
+                MiConexion.Close();
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+
             }
-            return miLista;
-
+            return cliente;
         }
-
 
         public DataTable GetClientesPorNombre(string nombre)
         {
@@ -219,27 +217,19 @@ namespace FACTURACION.Modelos.DAO
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM CLIENTE ");
-                sql.Append(" WHERE NOMBRE LIKE ('%" + nombre + "%') ");
-                
-                using (MiConexion)
-                {
-                    MiConexion.Open();
-                    using (comando)
-                    {
-                        comando.CommandType = CommandType.Text;
-                        comando.CommandText = sql.ToString();
+                sql.Append(" SELECT * FROM CLIENTE WHERE NOMBRE LIKE ('%" + nombre + "%') ");
 
-                        SqlDataReader dr = comando.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            dt.Load(dr);
-                        }
-                    }
-                }
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr); 
+                MiConexion.Close();
             }
             catch (Exception)
             {
+                MiConexion.Close();
             }
             return dt;
         }

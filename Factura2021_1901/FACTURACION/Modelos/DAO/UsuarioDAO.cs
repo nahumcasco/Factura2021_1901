@@ -190,6 +190,39 @@ namespace FACTURACION.Modelos.DAO
             }
             return nombre;
         }
-    
+        
+        public Usuario GetUsuarioPorEmail(string email)
+        {
+            Usuario user = new Usuario();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM USUARIO ");
+                sql.Append(" WHERE EMAIL = @Email; ");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = email;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    user.Id = (int)dr["ID"];
+                    user.Nombre = (string)dr["NOMBRE"];
+                    user.Email = (string)dr["EMAIL"];
+                }
+
+                MiConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MiConexion.Close();
+            }
+            return user;
+        }
+
     }
 }

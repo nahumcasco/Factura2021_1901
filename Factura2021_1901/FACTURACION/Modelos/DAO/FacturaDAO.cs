@@ -25,14 +25,15 @@ namespace FACTURACION.Modelos.DAO
 
 
             StringBuilder sqlD = new StringBuilder();
-            sql.Append(" INSERT INTO DETALLEFACTURA ");
-            sql.Append(" VALUES (@IdFactura, @IdProducto, @Precio, @Cantidad, @Total); ");
+            sqlD.Append(" INSERT INTO DETALLEFACTURA ");
+            sqlD.Append(" VALUES (@IdFactura, @IdProducto, @Precio, @Cantidad, @Total); ");
 
             MiConexion.Open();
             SqlTransaction _transaction = MiConexion.BeginTransaction(IsolationLevel.ReadCommitted);
             comando.Transaction = _transaction;
             try
             {
+                comando.Connection = MiConexion;
                 comando.CommandType = CommandType.Text;
                 comando.CommandText = sql.ToString();
                 comando.Parameters.Add("@Fecha", SqlDbType.DateTime).Value = factura.Fecha;
@@ -48,7 +49,7 @@ namespace FACTURACION.Modelos.DAO
                 foreach (var item in detaleFactura)
                 {
                     comandoD.Transaction = _transaction;
-
+                    comandoD.Connection = MiConexion;
                     comandoD.CommandType = CommandType.Text;
                     comandoD.CommandText = sqlD.ToString();
                     comandoD.Parameters.Add("@IdFactura", SqlDbType.Int).Value = idFactura;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FACTURACION.Controladores;
 
 namespace FACTURACION.Vistas
 {
@@ -15,6 +16,7 @@ namespace FACTURACION.Vistas
         public FacturaView()
         {
             InitializeComponent();
+            FacturaController controlador = new FacturaController(this);
         }
     }
 }

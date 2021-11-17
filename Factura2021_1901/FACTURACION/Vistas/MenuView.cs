@@ -16,6 +16,7 @@ namespace FACTURACION.Vistas
         }
         UsuariosView users;
         ClientesView clientes;
+        FacturaView facturas;
         private void UsuariosToolStripButton_Click(object sender, EventArgs e)
         {
             if (users == null)
@@ -55,6 +56,26 @@ namespace FACTURACION.Vistas
         private void Clientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             clientes = null;
+        }
+
+        private void FacturaToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (facturas == null)
+            {
+                facturas = new FacturaView();
+                facturas.MdiParent = this;
+                facturas.FormClosed += Facturas_FormClosed;
+                facturas.Show();
+            }
+            else
+            {
+                facturas.Activate();
+            }
+        }
+
+        private void Facturas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            facturas = null;
         }
     }
 }

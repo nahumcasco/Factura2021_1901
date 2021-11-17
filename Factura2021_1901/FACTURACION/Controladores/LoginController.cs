@@ -31,9 +31,12 @@ namespace FACTURACION.Controladores
             bool valido = userDAO.ValidarUsuario(user);
             if (valido)
             {
-                //MessageBox.Show("Usuario Correcto");
                 MenuView menu = new MenuView();
                 vista.Hide();
+                System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(vista.EmailTextBox.Text);
+                System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, null);
+                System.Threading.Thread.CurrentPrincipal = principal;
+
                 menu.Show();
             }
             else

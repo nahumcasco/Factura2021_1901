@@ -46,6 +46,9 @@ namespace FACTURACION.Vistas
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
+            this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.FacturaToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backStage1)).BeginInit();
@@ -56,6 +59,8 @@ namespace FACTURACION.Vistas
             this.toolStripEx2.SuspendLayout();
             this.toolStripTabItem3.Panel.SuspendLayout();
             this.toolStripEx3.SuspendLayout();
+            this.toolStripTabItem4.Panel.SuspendLayout();
+            this.toolStripEx4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControlAdv1
@@ -67,6 +72,7 @@ namespace FACTURACION.Vistas
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem1);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem2);
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem3);
+            this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem4);
             this.ribbonControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControlAdv1.MenuButtonFont = new System.Drawing.Font("Segoe UI", 8.25F);
             this.ribbonControlAdv1.MenuButtonText = "";
@@ -83,7 +89,7 @@ namespace FACTURACION.Vistas
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
             this.ribbonControlAdv1.ShowContextMenu = false;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = false;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(789, 157);
@@ -303,6 +309,51 @@ namespace FACTURACION.Vistas
             this.tabbedMDIManager1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2010);
             this.tabbedMDIManager1.ThemeName = "TabRendererOffice2010";
             // 
+            // toolStripTabItem4
+            // 
+            this.toolStripTabItem4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.toolStripTabItem4.Name = "toolStripTabItem4";
+            // 
+            // ribbonControlAdv1.ribbonPanel4
+            // 
+            this.toolStripTabItem4.Panel.Controls.Add(this.toolStripEx4);
+            this.toolStripTabItem4.Panel.Name = "ribbonPanel4";
+            this.toolStripTabItem4.Panel.ScrollPosition = 0;
+            this.toolStripTabItem4.Panel.TabIndex = 5;
+            this.toolStripTabItem4.Panel.Text = "Factura";
+            this.toolStripTabItem4.Position = 3;
+            this.toolStripTabItem4.Size = new System.Drawing.Size(69, 30);
+            this.toolStripTabItem4.Tag = "4";
+            this.toolStripTabItem4.Text = "Factura";
+            // 
+            // toolStripEx4
+            // 
+            this.toolStripEx4.AutoSize = false;
+            this.toolStripEx4.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx4.Image = null;
+            this.toolStripEx4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FacturaToolStripButton});
+            this.toolStripEx4.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx4.Name = "toolStripEx4";
+            this.toolStripEx4.Office12Mode = false;
+            this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.toolStripEx4.Size = new System.Drawing.Size(222, 91);
+            this.toolStripEx4.TabIndex = 0;
+            // 
+            // FacturaToolStripButton
+            // 
+            this.FacturaToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FacturaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("FacturaToolStripButton.Image")));
+            this.FacturaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.FacturaToolStripButton.Name = "FacturaToolStripButton";
+            this.FacturaToolStripButton.Size = new System.Drawing.Size(52, 74);
+            this.FacturaToolStripButton.Text = "Factura";
+            this.FacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.FacturaToolStripButton.Click += new System.EventHandler(this.FacturaToolStripButton_Click);
+            // 
             // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +380,9 @@ namespace FACTURACION.Vistas
             this.toolStripTabItem3.Panel.ResumeLayout(false);
             this.toolStripEx3.ResumeLayout(false);
             this.toolStripEx3.PerformLayout();
+            this.toolStripTabItem4.Panel.ResumeLayout(false);
+            this.toolStripEx4.ResumeLayout(false);
+            this.toolStripEx4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -350,5 +404,8 @@ namespace FACTURACION.Vistas
         private Syncfusion.Windows.Forms.BackStageTab backStageTab1;
         private Syncfusion.Windows.Forms.BackStageTab backStageTab2;
         private Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem4;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
+        private System.Windows.Forms.ToolStripButton FacturaToolStripButton;
     }
 }
